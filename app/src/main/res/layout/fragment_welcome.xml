@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/purple_200"
-    tools:context=".WelcomeFragment">
+    tools:context=".ui.welcome.WelcomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
       <TextView

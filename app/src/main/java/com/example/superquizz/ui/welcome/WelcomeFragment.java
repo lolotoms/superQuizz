@@ -1,4 +1,4 @@
-package com.example.superquizz;
+package com.example.superquizz.ui.welcome;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -16,8 +16,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.superquizz.databinding.ActivityMainBinding;
+import com.example.superquizz.R;
 import com.example.superquizz.databinding.FragmentWelcomeBinding;
+import com.example.superquizz.ui.quizz.QuizzFragment;
 
 /**
  * A simple {@link Fragment} subclass.
