@@ -5,5 +5,12 @@
     <string name="welcome_wrapper">Welcome to Super Quizz</string>
     <string name="your_name_edittext">Please type your name</string>
     <string name="play_button">Let\'s play</string>
+    <string name="question_text">Question ?</string>
+    <string name="answer1">Answer 1</string>
+    <string name="answer2">Answer 2</string>
+    <string name="answer3">Answer 3</string>
+    <string name="answer4">Answer 4</string>
+    <string name="validity_text">💪 Good Answer !</string>
+    <string name="next_button">Next</string>
 
 </resources>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/welcomeFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,7 +10,7 @@
 
     <!-- TODO: Update blank fragment layout -->
       <TextView
-        android:id="@+id/welcomeTextView"
+        android:id="@+id/welcomeFragment_welcomeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -23,7 +24,7 @@
           android:textColor="@color/black"/>
 
     <TextView
-        android:id="@+id/usernameTextView"
+        android:id="@+id/welcomeFragment_usernameTextView"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:gravity="center_horizontal"
@@ -32,7 +33,7 @@
         android:textSize="20sp"
         android:textStyle="bold" />
     <EditText
-        android:id="@+id/usernameEditText"
+        android:id="@+id/welcomeFragment_usernameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -41,7 +42,7 @@
         android:hint="@string/your_name_edittext"/>
 
     <Button
-        android:id="@+id/playButton"
+        android:id="@+id/welcomeFragment_playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
