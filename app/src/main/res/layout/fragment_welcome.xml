@@ -9,7 +9,7 @@
 
     <!-- TODO: Update blank fragment layout -->
       <TextView
-        android:id="@+id/welcome_wrapper"
+        android:id="@+id/welcomeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -23,7 +23,7 @@
           android:textColor="@color/black"/>
 
     <TextView
-        android:id="@+id/your_name_text"
+        android:id="@+id/usernameTextView"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:gravity="center_horizontal"
@@ -32,7 +32,7 @@
         android:textSize="20sp"
         android:textStyle="bold" />
     <EditText
-        android:id="@+id/your_name_edittext"
+        android:id="@+id/usernameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -41,7 +41,7 @@
         android:hint="@string/your_name_edittext"/>
 
     <Button
-        android:id="@+id/play_button"
+        android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
