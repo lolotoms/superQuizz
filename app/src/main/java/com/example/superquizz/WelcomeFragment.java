@@ -1,5 +1,6 @@
 package com.example.superquizz;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,13 +60,19 @@ public class WelcomeFragment extends Fragment {
     }
 
     @Override
+    public void onAttach(@NonNull Context context){
+        super.onAttach(context);
+        Log.d("WelcomeFragment Lyfecycle", "onAttach() called");
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
+        Log.d("WelcomeFragment Lyfecycle", "onCreate() called");
     }
 
     @Override
@@ -72,6 +80,7 @@ public class WelcomeFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentWelcomeBinding.inflate(inflater, container, false);
+        Log.d("WelcomeFragment Lyfecycle", "onCreateView() called");
         return binding.getRoot();
     }
     @Override
@@ -105,11 +114,43 @@ public class WelcomeFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+        Log.d("Fragment Lyfecycle", "onViewCreated() called");
     }
 
     @Override
     public void onStart() {
         super.onStart();
         binding.welcomeFragmentPlayButton.setEnabled(false);
+        Log.d("WelcomeFragment Lyfecycle", "onStart() called");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d("WelcomeFragment Lyfecycle", "onResume() called");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.d("WelcomeFragment Lyfecycle", "onPause() called");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d("WelcomeFragment Lyfecycle", "onStop() called");
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.d("WelcomeFragment Lyfecycle", "onDestroyView() called");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d("WelcomeFragment Lyfecycle", "onDestroy() called");
     }
 }
