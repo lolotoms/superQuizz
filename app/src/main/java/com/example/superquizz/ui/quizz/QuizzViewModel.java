@@ -31,7 +31,7 @@ public class QuizzViewModel extends ViewModel {
         boolean isValid = question != null && question.getAnswerIndex() == answerIndex;
         Integer currentScore = score.getValue();
         if (currentScore != null && isValid) {
-            score.setValue(currentScore+1);
+            score.setValue(currentScore + 1);
         }
         return isValid;
     }

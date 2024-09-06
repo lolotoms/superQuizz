@@ -27,53 +27,11 @@ import com.example.superquizz.ui.quizz.QuizzFragment;
  */
 public class WelcomeFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
     private FragmentWelcomeBinding binding;
 
-    public WelcomeFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment WelcomeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static WelcomeFragment newInstance(String param1, String param2) {
+    public static WelcomeFragment newInstance() {
         WelcomeFragment fragment = new WelcomeFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
-    }
-
-    @Override
-    public void onAttach(@NonNull Context context){
-        super.onAttach(context);
-        Log.d("WelcomeFragment Lyfecycle", "onAttach() called");
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-        Log.d("WelcomeFragment Lyfecycle", "onCreate() called");
     }
 
     @Override
@@ -84,6 +42,7 @@ public class WelcomeFragment extends Fragment {
         Log.d("WelcomeFragment Lyfecycle", "onCreateView() called");
         return binding.getRoot();
     }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -111,47 +70,14 @@ public class WelcomeFragment extends Fragment {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 QuizzFragment quizFragment = QuizzFragment.newInstance();
                 fragmentTransaction.add(R.id.fragment_container_view, quizFragment);
-                //fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });
         Log.d("Fragment Lyfecycle", "onViewCreated() called");
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        binding.welcomeFragmentPlayButton.setEnabled(false);
-        Log.d("WelcomeFragment Lyfecycle", "onStart() called");
-    }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        Log.d("WelcomeFragment Lyfecycle", "onResume() called");
-    }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        Log.d("WelcomeFragment Lyfecycle", "onPause() called");
-    }
 
-    @Override
-    public void onStop() {
-        super.onStop();
-        Log.d("WelcomeFragment Lyfecycle", "onStop() called");
-    }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        Log.d("WelcomeFragment Lyfecycle", "onDestroyView() called");
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        Log.d("WelcomeFragment Lyfecycle", "onDestroy() called");
-    }
 }
